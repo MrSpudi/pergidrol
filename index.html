@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Пергидроль</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="block">
+            <div class="header__content">
+                <div class="logo"><img src="img/logo.png" alt="logo"></div>
+                <div class="phone">
+                    <p> <a href="tel:8-969-343-00-99">8-969-343-00-99</a></p>
+                    <p> <a href="tel:8-905-714-47-41">8-905-714-47-41</a></p>
+                    <p>г.Павловский-Посад</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="banner-photo"><img src="img/banner.jpg" alt="Баннер"></div>
+        <div class="block">
+            <div class="banner-content">
+                <p>Пергидроль для очистки<br>
+                    воды в бассейне</p>
+                <p>Идеально чистый бассейн в любое <br>
+                    время года и в любую погоду.</p>
+            </div>
+            <div class="zakaz-zvonka">
+                <button type="button" class="btn btn-outline-info btn-zvonok" data-toggle="modal"
+                    data-target="#exampleModalLong">
+                    <p>Заказать звонок</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Заказать звонок</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="mail.php" method="post" id="form">
+
+                            <input type="hidden" name="project_name" value="Полгидроль">
+                            <input type="hidden" name="admin_email" value="Mrspudi@inbox.ru">
+                            <input type="hidden" name="form_subject" value="Заказ звонка">
+                            <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input type="text" class="form-control" name="Имя" id="name" value="" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" name="Телефон" id="phone" class="form-control bfh-phone" required />
+                            </div>
+                            <button class="btn btn-info">Заказать</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sale" id="formaTo">
+        <div class="block">
+            <div class="zakaz-items">
+                <div class="timer-price">
+                    <div class="timer1" id="timer">
+                        <h5>Внимание, Акция!</h5>
+                        <p>Закажите 5 канистр и получите</p>
+                        <h4>Скидку!</h4>
+                        <div class="container1">
+                            <div class="numbers1">
+                                <div><span id="days" class="hidden-day">08</span> </div>
+                                <div class="description1"></div>
+                            </div>
+                            <div class="numbers1">
+                                <div><span id="hours">18</span><b class="tire">:</b></div>
+                                <div class="description1">Часов</div>
+                            </div>
+                            <div class="numbers1">
+                                <div><span id="minutes">33</span><b class="tire">:</b></div>
+                                <div class="description1">Минут</div>
+                            </div>
+                            <div class="numbers1">
+                                <div><span id="seconds">44</span></div>
+                                <div class="right-second">Секунд</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="forma-zakaza">
+                    <form action="mail.php" method="post" id="forma">
+                        <input type="hidden" name="project_name" value="Полгидроль">
+                        <input type="hidden" name="admin_email" value="Mrspudi@inbox.ru">
+                        <input type="hidden" name="form_subject" value="Заказ Товара">
+                        <div class="forma-title">
+                            <h3>Оформление заказа</h3>
+                            <p>Мы перезвоним вам в течение 15 минут</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Имя" id="name" placeholder="Введите ФИО"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="Телефон" id="phone" class="form-control bfh-phone"
+                                placeholder="Введите номер телефона" required />
+                        </div>
+                        <div class="input-position">
+                            <div class="btn-group dostavka">
+                                <div class="pdostavki">Выберите тип доставки</div>
+                                <p>Тип доставки</p>
+                                <label>
+                                    <input type="radio" class="radio_option" id="optionsRadios1" name="Тип-доставки"
+                                        id="samovivoz" autocomplete="off" value="Самовывоз" required>
+                                    <span>Самовывоз</span>
+                                </label>
+                                <label>
+                                    <input type="radio" class="radio_option" id="optionsRadios2"  name="Тип-доставки"
+                                        id="dostavka" onclick="infoDostavki" autocomplete="off" value="Доставка" required>
+                                    <span>Доставка</span>
+                                </label>
+                            </div>
+                            <div class="counterProduct">
+                                <p>Количество</p>
+                                <div class="positionCounter">
+                                    <div class="input-number__minus"><img src="img/minus.png" alt=""></div>
+                                    <input type="number" step="1" min="1" max="100" id="num_count" name="Количество"
+                                        value="1" class="input-number__input" pattern="^[0-9]+$">
+                                    <div class="input-number__plus"><img src="img/plus.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spoiler">
+                            <p> Доставка осуществляется только </p>
+                            <p> по городу
+                                Павловский-Посад.</p> Цена доставки: 50 рублей.
+                        </div>
+                        <div class="spoiler sam">
+                            <p> Самовывоз с раннего утра</p>
+                            <p> до позднего вечера.</p>
+                        </div>
+                        <div class="send">
+                            <button class="btn zakaz-btn" id="proverka">Заказать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="stoimost">
+        <div class="block">
+            <h1>Стоимость</h1>
+
+            <div class="stoimost-item">
+                <div class="stoimost-items__image">
+                    <img src="img/kanistra.jpg" alt="">
+                </div>
+                <div class="stoimost-items__info">
+                    <h3>Пергидроль Медицинская 37-40%</h3>
+                    <p><span class="spisok">Обьём:</span> 10 литров</p>
+                    <p><span class="spisok">Цена:</span> 1100 рублей</p>
+                    <p><span class="spisok">Вес:</span> 11,4 кг</p>
+                    <p>Цена указана за 1 канистру. НЕ РАЗБАВЛЕННАЯ</p>
+                </div>
+            </div>
+
+
+            <div class="stoimost-button">
+                <a class="btn zakaz-btn" href="#formaTo">Заказать</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="whatPergidrol">
+        <div class="block">
+            <h1>Что такое Пергидроль</h1>
+            <div class="whatPergidrolItems">
+                <div class="whatPergidrolText">
+                    <p>Пергидроль представляет собой инновационное средство для очистки бассейнов любого размера. </p>
+                    <br>
+                    <p>Этот раствор абсолютно безвреден, не имеет запаха и цвета, а также не вызывает аллергических
+                        реакций. Полное очищение воды уже в течение 12 часов после применения раствора. Мечтаете об
+                        идеальном бассейне? Тогда Вы по адресу!</p>
+                </div>
+                <div class="whatPergidrolImage">
+                    <img src="img/pergidrol.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="basine">
+        <div class="block">
+            <div class="basine-item">
+                <h1 class="basine-title">Рассчитайте, сколько нужно перекиси водорода<br>
+                    для вашего бассейна</h1>
+                <div class="card-header ">
+                    <h5 class="card-title">Рассчет обьёма прямоугольного бассейна</h5>
+                </div>
+                <div class="basine-calculator">
+
+
+
+
+                    <!-- Стоимость недвижимости -->
+                    <div class="card-body">
+                        <label for="lengthText">Длина,(м)</label>
+                        <input type="text" id="lengthText" class="form-control right"
+                            aria-describedby="lengthNumberHolder" value="1" disabled>
+                        <input type="range" class="form-control-range custom-range" id="lengthRange" min="0" step="0.1"
+                            max="10">
+                    </div>
+                    <!-- / Стоимость недвижимости -->
+
+                    <!-- Первоначальный взнос -->
+                    <div class="card-body">
+                        <label for="widthText">Ширина, (М)</label>
+                        <input type="text" id="widthText" class="form-control right"
+                            aria-describedby="widthNumberHolder" value="1" disabled>
+                        <input type="range" class="form-control-range custom-range" id="widthRange" min="0" step="0.1"
+                            max="10">
+
+                    </div>
+                    <!-- / Первоначальный взнос -->
+
+                    <!-- Срок кредита -->
+                    <div class="card-body">
+                        <label for="depthText">Глубина, (М)</label>
+                        <input type="text" id="depthText" class="form-control right"
+                            aria-describedby="depthNumberHolder" value="10" disabled>
+                        <input type="range" class="form-control-range custom-range" id="depthRange" min="1" step="0.1"
+                            max="10">
+
+                    </div>
+                    <!-- / Срок кредита -->
+
+
+
+
+                </div>
+                <div class="basine-pictures">
+                    <div class="basine-photo">
+                        <a href=""><img class="basine-image" src="img/rectangularBasine.jpg" alt=""></a>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="card-footer">
+                <p> <span id="volume"></span> </p>
+                <p></small><span id="freshWater"></span> </p>
+                <p> <span id="reprocess"> </span> </p>
+                <p><span id="Prevention"></span> </p>
+                <p><span id="swampyReservoirs"></span> </p>
+            </div>
+    </section>
+
+    <section class="basine">
+        <div class="block">
+            <div class="basine-item">
+
+                <div class="card-header ">
+                    <h5 class="card-title">Рассчет обьёма круглого бассейна</h5>
+                </div>
+                <div class="basine-calculator">
+
+
+
+
+                    <!-- Стоимость недвижимости -->
+                    <div class="card-body">
+                        <label for="depthText1">Глубина, (М)</label>
+                        <input type="text" id="depthText1" class="form-control right"
+                            aria-describedby="length1NumberHolder" value="1" disabled>
+                        <input type="range" class="form-control-range custom-range" id="depthRange1" min="0" step="0.1"
+                            max="10">
+                    </div>
+                    <!-- / Стоимость недвижимости -->
+
+                    <!-- Первоначальный взнос -->
+                    <div class="card-body">
+                        <label for="diameterText">Диаметр, (М)</label>
+                        <input type="text" id="diameterText" class="form-control right"
+                            aria-describedby="diameterNumberHolder" value="1" disabled>
+                        <input type="range" class="form-control-range custom-range" id="diameterRange" min="0"
+                            step="0.1" max="10">
+
+                    </div>
+                    <!-- / Первоначальный взнос -->
+
+
+
+
+
+
+                </div>
+                <div class="basine-pictures">
+                    <div class="basine-photo">
+                        <a href=""><img class="basine-image" src="img/roundBasine.jpg" alt=""></a>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="card-footer">
+                <p> <span id="volume1"></span> </p>
+                <p></small><span id="freshWater1"></span> </p>
+                <p> <span id="reprocess1"> </span> </p>
+                <p><span id="Prevention1"></span> </p>
+                <p><span id="swampyReservoirs1"></span> </p>
+                <p class="card-footer__info">Администрация сайта не несёт никакой ответственности за правильность
+                    полученных в калькуляторе данных.</p>
+            </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="block">
+            <div class="footer-text">
+                <h1>Контактная информация</h1>
+                <h3><span>Адресс:</span> Московская область, Павловский Посад, улица Леваневского, 15</h3>
+                <h3><span class="telposition">Телефоны для связи:</span> <p><a href="tel:8-969-343-00-99">8-969-343-00-99</a> </p>
+                  <p> <a href="tel:8-905-714-47-41">8-905-714-47-41</a></h3></p> 
+            </div>
+            <div class="yandex">
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa1eb00bbce78a734116fe6278283379d4619c60d8477fe98c66da25ca3dd5959&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+                </script>
+            </div>
+            <div class="year">2020</div>
+        </div>
+        
+    </footer>
+
+    <div class="scrollup">
+        <!-- Иконка fa-chevron-up (Font Awesome) -->
+
+        <img src="img/arrow-up.png" alt="">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Подключение минифицированной версии Jquery -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <!-- Подключение таймера обратного отсчёта -->
+    <script src="https://e-timer.ru/js/etimer.js"></script>
+    <!-- Подключение основных скриптов -->
+
+
+
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
